@@ -6,6 +6,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<style>
 			.container{background:#cecece;}
+			.highlight{border: 1px solid yellow;}
 		</style>
 	</head>
 	<body>
@@ -41,6 +42,10 @@
 		<span v-bind:class="loadClass">
 			look at me!
 		</span>
+
+		<!-- exercise -->
+		<img :src="imgSrc" :alt="imgAlt" :title="imgTitle" />
+
 	</div>
 	
 	<script>
@@ -48,7 +53,10 @@
 		//Bind Vue object to HTML element through query selector
 		el: '#app',
 		data:{
-			loadClass : 'container',
+			loadClass : 'container highlight',
+			imgSrc: 'dontpanic.jpg',
+			imgAlt: 'image of leaf',
+			imgTitle: 'leaf',
 			//newStyle : 'font-size:30px;',
 			//newAlt : 'dynamically set alt!'
 			
